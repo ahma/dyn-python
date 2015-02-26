@@ -35,7 +35,7 @@ class DynTrafficClient(object):
     """
 
     def __init__(
-        self, host='api.dynect.net', port=443, ssl=True, api_version="current"
+        self, host='api.dynect.net', port=443, ssl=True, api_version="current", verbose=False
     ):
         """
         Basic initializer method
@@ -54,7 +54,7 @@ class DynTrafficClient(object):
         # Continue polling for response if a job comes back as incomplete?
         self.poll_incomplete = True
 
-        self.verbose = True
+        self.verbose = verbose
         self.api_version = api_version
         self.content_type = "application/json"
 
